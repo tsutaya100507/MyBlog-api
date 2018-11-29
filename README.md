@@ -6,6 +6,7 @@ application up and running.
 Things you may want to cover:
 
 * Ruby version
+ruby 2.5
 
 * System dependencies
 
@@ -23,3 +24,13 @@ Things you may want to cover:
 
 * ...
 # MyBlog-api
+
+## bundle install
+```
+# コンテナ内でのbundle install
+docker-compose run web bundle install
+
+# bundle install後にbuildが必要
+docker-compose build
+```
+
