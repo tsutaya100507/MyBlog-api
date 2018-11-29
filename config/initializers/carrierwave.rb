@@ -19,15 +19,16 @@ CarrierWave.configure do |config|
   case Rails.env
     when 'production'
       config.fog_directory = 'tatsuyaichikawa-blog-images'
-      config.asset_host = 'https://s3.amazonaws.com/tatsuyaichikawa-blog-images'
+      config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/tatsuyaichikawa-blog-images'
 
     when 'development'
       config.fog_directory = 'tatsuyaichikawa-blog-images'
-      config.fog_public     = false                                                 # optional, defaults to true
+      config.fog_public     = false
+      config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/tatsuyaichikawa-blog-images'
       config.fog_attributes = { cache_control: "public, max-age=#{365.days.to_i}" }
     when 'test'
       config.fog_directory = 'tatsuyaichikawa-blog-images'
-      config.asset_host = 'https://s3.amazonaws.com/tatsuyaichikawa-blog-images'
+      config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/tatsuyaichikawa-blog-images'
   end
 end
 
