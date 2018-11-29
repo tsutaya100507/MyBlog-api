@@ -15,6 +15,11 @@ module Api
         end          
       end
 
+      def show
+        blog = Blog.find(params[:id])
+        render json: blog, status: 200
+      end
+
       def destroy
         blog = Blog.find(params[:id])
         blog.destroy
