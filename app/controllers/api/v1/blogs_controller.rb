@@ -16,7 +16,7 @@ module Api
       end
 
       def show
-        blog = Blog.find(params[:id])
+        blog = Blog.find_by(slug: params[:slug])
         render json: blog, status: 200
       end
 
