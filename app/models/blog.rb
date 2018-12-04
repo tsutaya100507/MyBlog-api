@@ -1,12 +1,12 @@
 class Blog < ApplicationRecord
-  validates :slug, uniqueness: true
+  validates :slug, uniqueness: true, length: { maximum: 20 }
+  validates :title, length: { maximum: 50 }
   has_many :blog_tags, dependent: :destroy
   has_many :tags, through: :blog_tags
   mount_base64_uploader :heroImg, ImageUploader
 
   def save_tags(tags)
     current_tags = self.tags.pluck(:name) unless self.tags.nil?
-    binding.pry
     old_tags = current_tags - tags
     new_tags = tags - current_tags
 
