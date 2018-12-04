@@ -1,0 +1,10 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+create_table "blog_tags", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  t.integer "blog_id", unique: true
+  t.integer "tag_id", unique: true
+  t.datetime "created_at", null: false
+  t.datetime "updated_at", null: false
+  t.index ["blog_id"], name: "index_blog_id"
+  t.index ["tag_id"], name: "index_tag_id"
+end
