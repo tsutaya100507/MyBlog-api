@@ -3,3 +3,4 @@
 require 'blogs.schema'
 require 'tags.schema'
 require 'blog_tags.schema'
+require 'users.schema'
