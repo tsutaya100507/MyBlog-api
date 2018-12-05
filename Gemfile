@@ -26,6 +26,9 @@ gem 'puma', '~> 3.11'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'ridgepole'
 
+# Use Knock for user authentication
+gem 'knock'
+
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 gem 'rack-cors'
 
@@ -37,7 +40,7 @@ gem 'fog-aws'
 gem 'carrierwave-base64'
 
 # Use environment valiables
-gem 'dotenv-rails'
+gem 'dotenv-rails', require: 'dotenv/rails-now'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
