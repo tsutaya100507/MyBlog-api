@@ -18,17 +18,17 @@ CarrierWave.configure do |config|
   # 環境ごとにS3のバケットを指定
   case Rails.env
     when 'production'
-      config.fog_directory = 'tatsuyaichikawa-blog-images'
-      config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/tatsuyaichikawa-blog-images'
+      config.fog_directory = 'bug-tokidoki-namidame'
+      config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/bug-tokidoki-namidame'
 
     when 'development'
-      config.fog_directory = 'tatsuyaichikawa-blog-images'
+      config.fog_directory = 'bug-tokidoki-namidame'
       config.fog_public     = false
-      config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/tatsuyaichikawa-blog-images'
+      config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/bug-tokidoki-namidame'
       config.fog_attributes = { cache_control: "public, max-age=#{365.days.to_i}" }
     when 'test'
-      config.fog_directory = 'tatsuyaichikawa-blog-images'
-      config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/tatsuyaichikawa-blog-images'
+      config.fog_directory = 'bug-tokidoki-namidame'
+      config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/bug-tokidoki-namidame'
   end
 end
 
